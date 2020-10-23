@@ -4,7 +4,7 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 def main():
     x = [3,5]
-    print(binStepper(2, x))
+    print(binStepper(10, x))
 
 def binStepper(steps, choices):
     # Steps = The number of steps left to take

@@ -1,5 +1,5 @@
 def main():
-    x = [10,15,12]
+    x = [10,7,15,12]
     y = 17
 
     print(runThrough(x, y))

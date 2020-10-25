@@ -13,7 +13,7 @@ def binStepper(steps, choices):
     if (steps > 0):
         for i in choices:
             if steps - i == 0:
-                work+=1
+                work += 1
             elif steps - i > 0:
                 work += binStepper(steps - i, choices)
 

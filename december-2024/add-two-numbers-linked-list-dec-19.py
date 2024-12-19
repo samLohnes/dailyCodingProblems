@@ -10,6 +10,17 @@ class ListNode(object):
             self=self.next
         print()
 
+def makeLinkedListFromList(l1):
+    if len(l1) < 1:
+        return None
+    currNode = ListNode(val=l1[0])
+    dummyHead = currNode
+    for i in l1[1:]:
+        currNode.next = ListNode(val=i)
+        currNode = currNode.next
+    
+    return dummyHead
+
 def addTwoNumbers(l1, l2):
     """
     :type l1: ListNode
@@ -31,22 +42,21 @@ def addTwoNumbers(l1, l2):
         l2 = l2.next if l2 else None
     return dummyHead.next
 
-list1 = ListNode(val=2, next=ListNode(val=4, next=ListNode(val=3)))
-list2 = ListNode(val=5, next=ListNode(val=5, next=ListNode(val=4)))
+list1 = makeLinkedListFromList([2, 4, 3])
+list2 = makeLinkedListFromList([5,6,4])
 
 result1 = addTwoNumbers(list1, list2)
 result1.print()
 
-list1 = ListNode(val=0,)
-list2 = ListNode(val=0,)
+list1 = makeLinkedListFromList([0])
+list2 = makeLinkedListFromList([0])
 
 result2 = addTwoNumbers(list1, list2)
 result2.print()
 
-list1 = ListNode(val=9, next=ListNode(val=9, next=ListNode(val=9, next=ListNode(val=9, next=ListNode(val=9, next=ListNode(val=9, next=ListNode(val=9)))))))
-list2 = ListNode(val=9, next=ListNode(val=9, next=ListNode(val=9, next=ListNode(val=9))))
+list1 = makeLinkedListFromList([9,9,9,9,9,9,9])
+list2 = makeLinkedListFromList([9,9,9,9])
 
 result3 = addTwoNumbers(list1, list2)
 result3.print()
-
 
